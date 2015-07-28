@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> EasyShop</title>
+  <title>EasyShop</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,5 +10,10 @@
 
 <%= render "nav" %>
 <div class='container'>
+  <%= content_tag :div, notice, class: "gb-success" %>
+  <%= content_tag :div, alert, class: "bg-success" %>
   <%= yield %>
 </div>
+
+</body>
+</html>
