@@ -17,6 +17,12 @@ class OrdersController < ApplicationController
   
   private
   
+  
+  def notify_user
+    @order_form.user.send_reset_password_instructions
+    OrderMailer.order_confirmation(@order_form.order).deliver 
+  end
+  
   def order_params
     params.require(:order_form).permit(
       user: [ :name, :phone, :address, :city, :country, :postal_code, :email]
