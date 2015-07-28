@@ -31,6 +31,7 @@ gem 'mini_magick', '~> 4.2.7'
 #gem 'puma', '~> 2.12.2'
 gem 'devise', '~> 3.5.1'
 gem 'country_select', '~> 2.2.0'
+gem 'braintree', '~> 2.46.0'
 
 
 group :test do
