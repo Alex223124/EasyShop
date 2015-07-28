@@ -50,7 +50,7 @@ Rails.application.configure do
     address: ENV["SMTP_ADDRESS"],
     user_name: ENV["SMTP_USER"],
     password: ENV["SMTP_PASSWORD"],
-    domain: "josemota.net",
+    domain: "example.net",
     authentication: :plain,
     enable_starttls_auto: false
   }

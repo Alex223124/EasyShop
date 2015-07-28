@@ -3,4 +3,14 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+
 Rails.application.load_tasks
+
+namespace :test do
+  Rake::TestTask.new :services => "test:prepare" do |t|
+    t.libs << "test"
+    t.pattern = "test/serices/**/*_test.rb"
+  end 
+end 
+
+Rake::Task[:test].enhance { Rake::Task["test:services"].invoke }
